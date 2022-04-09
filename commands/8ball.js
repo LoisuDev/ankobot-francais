@@ -3,12 +3,12 @@ const Discord = require('discord.js');
 module.exports = {
   name: "8ball",
   aliases: ['8b'],
-  description: "Ask me a question, and I will answer by yes, no, or maybe.",
+  description: "Posez-moi une question, je répondrais par oui, non ou peut-être",
   usage: '%8ball <question>',
   execute(bot, message, args) {
-        if (!args[1]) return message.reply("Please ask a question !")
+        if (!args[1]) return message.reply("Merci de poser une question !")
 
-    let replies = ["Yes.", "No.", "Maybe."];
+    let replies = ["Oui.", "Non.", "Peut-être."];
     let question = args.slice(0).join(" ");
     let res = Math.floor((Math.random() * replies.length));
 
@@ -19,7 +19,7 @@ module.exports = {
         .setTimestamp()
         .setThumbnail(message.author.avatarURL())
         .addField('Question:', question)
-        .addField("Answer:", replies[res]);
+        .addField("Réponse:", replies[res]);
     
     message.channel.send(ball8_embed);
     }
