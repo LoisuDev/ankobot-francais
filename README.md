@@ -1,68 +1,57 @@
 # Anko
 
-Basically called CBot on Github because of the previous name, Anko is a simple Javascript bot.
+Anko est un simple bot codé en JavaScript.
 
-## Installation and running (Windows)
+## Installation et démarrage (Windows)
 
-### Requirements
-You will need Nodejs. Installation: https://nodejs.org/dist/v14.17.4/node-v14.17.4-x64.msi // For other platforms, just go to https://nodejs.org/ and choose your platform by clicking "Other Downloads".
+### Requis
+Vous allez avoir besoin de Nodejs. Installation : https://nodejs.org/dist/v14.17.4/node-v14.17.4-x64.msi // ¨Pour les autres platformes, cliquez ici https://nodejs.org/ et choisissez votre plateforme en cliquant sur "Other Downloads".
 ![chrome_mY1RZnZr2F](https://user-images.githubusercontent.com/76608613/127999616-7cc00ce4-7f61-41f7-ae71-12ccb4f38949.png)
 
-You will need a code editor. Visual Studio Code is good enough. Download it on https://code.visualstudio.com/
+Vous allez avoir besoin d'un éditeur de code. Visual Studio Code est suffisant pour cela. Téléchargez-le ici : https://code.visualstudio.com/
 ![chrome_VMCu9gHRo4](https://user-images.githubusercontent.com/76608613/127999498-2dff368b-c9c3-4d21-93a6-32bd0512b2a9.png)
 
-You will need a Discord Bot created on https://discord.com/developers/applications.
-After that, invite the bot to your server, and copy the token, you will need it to run the script. (I won't explain here how you invite a bot and how you get the token, there are a lot of tutorials on youtube).
+Vous allez avoir besoin d'un bot créé sur https://discord.com/developers/applications.
+Après cela, invitez le bot sur votre serveur, et copiez le token, vous allez en avoir besoin pour lancer le script. (Je ne vais pas vous expliquer comment inviter le bot ni comment copier le token, il y a plein de tutos sur YouTube).
 
 ### Installation
 
-First of all you need to download the zip of the latest release, and extract it.
-Then you will need to open a command prompt (powershell is better).
+Déjà, vous devrez télécharger le zip de la dernière release et l'extraire.
+Ensuite vous devrez ouvrir un terminal.
 
-Run the following commands:
+Entrez les commandes suivantes:
 ```bash
 ~$ cd PATH\TO\THE\BOT\FOLDER
 ~$ npm install
 ```
-*Replace PATH\TO\THE\BOT\FOLDER with the path where were the bot files extracted.*
+*Remplacez PATH\TO\THE\BOT\FOLDER avec le chemin où les fichiers ont été extraits*
 
-### Running
+### Démarrage
 
-Open the *main.js* file with your code editor.
+Ouvrez le fichiez *main.js* avec votre éditeur de code.
 
-Search for these two lines:
+Cherchez cette ligne:
 ```javascript
-const prefix = PROCESS.ENV.PREFIX;
-bot.login(PROCESS.ENV.BOT_TOKEN);
+bot.login("YOUR_TOKEN");
 ```
 
-Replace the `PROCESS.ENV.PREFIX` with `"%"`. This will be the prefix of the bot. I do not advise you to set another prefix, because the bot configuration displays that prefix, like in the help command.
+Remplacez le `YOUR_TOKEN` avec le token de votre bot. N'oubliez pas de le laisser entre guillemets ! Autrement cela ne marchera pas.
 
-Replace the `PROCESS.ENV.BOT_TOKEN` with the token of your bot. Don't forget that you need to quote it! Otherwise it won't work.
+Sauvegardez le fichier avec `CTRL+S`.
 
-Your two lines should look like this now:
-
-```javascript
-const prefix = "%";
-bot.login("your_token");
-```
-
-Then save the file by pressing `CTRL+S`
-
-Go to your command prompt, verify that you're in the bot folder, and then run this command:
+Retournez sur votre terminal, vérifiez que vous êtes bien dans le dossier du bot, puis lancez la commande :
 ```bash
 ~$ node ./main.js
 ```
 
-And it should be good. If the bot is on, the console will return 
+Et ça devrait être bon ! Si cela fonctionne, la console vous retournera le message suivant :
 ```shell
 Anko est en ligne.
 ```
-Which means "Anko is online" in French.
 
-If you have any issues, please come in my Discord Server, Loisu Tea Time: https://dsc.gg/loisu
+Si vous avez une question, ou un problème, n'hésitez pas à me contacter sur Discord (Loisu#4816). Merci d'être concis(e) dans votre demande.
 
-### Enjoy!
+### Profitez!
 
 
 
