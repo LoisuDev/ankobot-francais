@@ -8,6 +8,9 @@ module.exports = {
     permissions: 'Ban Members',
 
     async execute(bot, message, args) {
+        
+        message.channel.send("Cette commande n'est pas encore disponible en Français. Restez à l'affût des mises à jour du repo sur Github: https://github.com/azusa-neko/ankobot-francais")
+        
         if(!message.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) return message.channel.send('You can\'t do that. ERR 04')
         
 
