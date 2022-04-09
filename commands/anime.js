@@ -7,6 +7,9 @@ module.exports = {
   usage: '%anime <anime you want to look at> \n%anime list',
   
   async execute(bot, message, args) {
+    
+    return message.channel.send("Cette commande n'est pas disponible en français. Si vous souhaitez l'utiliser, veuillez utiliser la version anglaise du bot : https://github.com/azusa-neko/ankobot-english")
+
     let anime = args.join(" ");
     if(!args.length) {return message.channel.send('Invalid arguments provided. ERR 01\n**Please provide an anime name! Type %anime list if you don\'t know what to search!**')}
     
